@@ -1,38 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js + Typescript 환경 구성
 
-## Getting Started
+`yarn create next-app --typescript`
 
-First, run the development server:
+# API 추가
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- GET /store/list api 추가
+  - 응답 값: 상품 리스트
+  - 딜레이: 3000ms
+- GET /store/product/:id api 추가
+  - 응답 값: 상품 상세 정보
+  - 딜레이: 랜덤(Math.random \* 10000)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# 컴포넌트 추가
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- ProductList
+- ProductDetail
+- Loading
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+# 페이지 추가
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- store 페이지
+  - 오픈그래프 메타 태그 추가
+  - suspense & lazy 적용
+- product 페이지
+  - 오픈그래프 메타 태그 추가
+  - promise race 사용
+  - suspense & lazy 적용
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Vercel 배포
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# facebook 공유 링크 디버깅
