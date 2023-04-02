@@ -2,6 +2,7 @@
 
 import { ERROR_RES } from "@/types/common/api";
 import { GET_PRODUCT_DETAIL_RES } from "@/types/store/api";
+import { delay } from "@/utils/common";
 import { formatProductId, getProductDetail } from "@/utils/store";
 import type { NextApiRequest, NextApiResponse } from "next";
 
@@ -25,7 +26,7 @@ export default function handler(
     if (!productDetail) {
       res.status(400).json({ error: "No Matching product with ID" });
     } else {
-      res.status(200).json(productDetail);
+      delay(() => res.status(200).json(productDetail), Math.random() * 1000);
     }
   }
 }

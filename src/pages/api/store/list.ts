@@ -2,6 +2,7 @@
 
 import { PRODUCT_LIST } from "@/constants/store";
 import { GET_PRODUCT_LIST_RES } from "@/types/store/api";
+import { delay } from "@/utils/common";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 const GET_PRODUCT_LIST_RES_SAMPLE: GET_PRODUCT_LIST_RES = {
@@ -14,6 +15,6 @@ export default function handler(
   res: NextApiResponse<GET_PRODUCT_LIST_RES>
 ) {
   if (req.method === "GET") {
-    res.status(200).json(GET_PRODUCT_LIST_RES_SAMPLE);
+    delay(() => res.status(200).json(GET_PRODUCT_LIST_RES_SAMPLE), 3000);
   }
 }
