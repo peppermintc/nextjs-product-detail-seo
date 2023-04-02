@@ -1,4 +1,5 @@
 import { GET_PRODUCT_LIST_RES } from "@/types/store/api";
+import { PRODUCT_LIST } from "@/types/store/data";
 
 import Head from "next/head";
 import { lazy, Suspense } from "react";
@@ -6,7 +7,7 @@ import { lazy, Suspense } from "react";
 const Loading = lazy(() => import("@/components/Loading"));
 const ProductList = lazy(() => import("@/components/ProductList"));
 
-function Store({ list, total }: GET_PRODUCT_LIST_RES) {
+function Store({ productList }: { productList: PRODUCT_LIST }) {
   return (
     <>
       <Head>
@@ -16,23 +17,21 @@ function Store({ list, total }: GET_PRODUCT_LIST_RES) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Suspense fallback={<Loading />}>
-        <h3>Total: {total}</h3>
-        <ProductList productList={list} />
-      </Suspense>
+      <h1>Product List</h1>
+
+      <ProductList productList={productList} />
     </>
   );
 }
 
 export async function getServerSideProps() {
   const res = await fetch("http://localhost:3000/api/store/list");
-  const data = await res.json();
-  const { list, total }: GET_PRODUCT_LIST_RES = data;
+  const data: GET_PRODUCT_LIST_RES = await res.json();
+  const productList = data.list;
 
   return {
     props: {
-      list,
-      total,
+      productList,
     },
   };
 }

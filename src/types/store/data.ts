@@ -1,8 +1,10 @@
+import { StaticImageData } from "next/image";
+
 /** 상품 상세 정보 */
 interface PRODUCT_DETAIL {
   id: number;
   name: string;
-  imageURL: string;
+  imageURL: StaticImageData;
 }
 
 /** 상품 리스트 */
