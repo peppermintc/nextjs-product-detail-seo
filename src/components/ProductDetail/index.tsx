@@ -1,9 +1,13 @@
-import { ProductDetail } from "@/types/store/data";
+import { PRODUCT_DETAIL } from "@/types/store/data";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 
-const ProductDetail = ({ productDetail }: { productDetail: ProductDetail }) => {
+const ProductDetail = ({
+  productDetail,
+}: {
+  productDetail: PRODUCT_DETAIL;
+}) => {
   return (
     <>
       <h1>{productDetail.name}</h1>

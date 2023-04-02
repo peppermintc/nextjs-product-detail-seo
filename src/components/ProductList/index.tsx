@@ -1,14 +1,14 @@
-import { ProductList } from "@/types/store/data";
+import { PRODUCT_LIST } from "@/types/store/data";
 import Link from "next/link";
 import React from "react";
 
-const ProductList = ({ productList }: { productList: ProductList }) => {
+const ProductList = ({ productList }: { productList: PRODUCT_LIST }) => {
   return (
     <section>
       {productList.map((product, index) => (
-        <Link key={index} href={`/store/product/${product.id}`}>
-          {product.name}
-        </Link>
+        <li key={index}>
+          <Link href={`/store/product/${product.id}`}>{product.name}</Link>
+        </li>
       ))}
     </section>
   );

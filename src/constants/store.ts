@@ -1,19 +1,19 @@
-import { ProductDetail } from "@/types/store/data";
+import { PRODUCT_DETAIL } from "@/types/store/data";
 
 /** 상품 상세 정보 */
-const PRODUCT_DETAIL_1: ProductDetail = {
+const PRODUCT_DETAIL_1: PRODUCT_DETAIL = {
   id: 1,
   name: "Product Name 1",
   imageURL: "../img/nike_shoe_1.webp",
 };
 
-const PRODUCT_DETAIL_2: ProductDetail = {
+const PRODUCT_DETAIL_2: PRODUCT_DETAIL = {
   id: 2,
   name: "Product Name 2",
   imageURL: "../img/nike_shoe_2.webp",
 };
 
-const PRODUCT_DETAIL_3: ProductDetail = {
+const PRODUCT_DETAIL_3: PRODUCT_DETAIL = {
   id: 3,
   name: "Product Name 3",
   imageURL: "../img/nike_shoe_3.webp",

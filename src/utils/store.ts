@@ -1,12 +1,12 @@
 import { PRODUCT_LIST } from "@/constants/store";
-import { ProductDetail } from "@/types/store/data";
+import { PRODUCT_DETAIL } from "@/types/store/data";
 
 /**
  * 상품 리스트에서 ID로 상품 정보를 반환
  * @argument productId 상품 ID
  * @returns 상품 상세 정보
  */
-const getProductDetail = (productId: number): ProductDetail | undefined => {
+const getProductDetail = (productId: number): PRODUCT_DETAIL | undefined => {
   const productDetail = PRODUCT_LIST.find(
     (product) => product.id === productId
   );
