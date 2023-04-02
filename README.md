@@ -1,17 +1,10 @@
-# Next.js + Typescript 환경 구성
+### Next.js + Typescript 템플릿
 
 `yarn create next-app --typescript`
 
-# API Routes 추가
+---
 
-- 딜레이 함수
-
-```javascript
-// /utils/common.ts > delay 함수
-const delay = (callback: () => void, delayTime: number) => {
-  return setTimeout(callback, delayTime);
-};
-```
+### API Routes 추가
 
 - GET /store/list api 추가
 
@@ -63,22 +56,29 @@ const delay = (callback: () => void, delayTime: number) => {
   }
   ```
 
-# 컴포넌트 추가
+---
+
+### 컴포넌트 추가
 
 - ProductList
 - ProductDetail
 - Loading
 
-# 페이지 추가
+---
+
+### 페이지 추가
 
 - store 페이지
   - 오픈그래프 메타 태그 추가
   - suspense & lazy 적용
 - product 페이지
   - 오픈그래프 메타 태그 추가
-  - promise race 사용
   - suspense & lazy 적용
 
-# Vercel 배포
+---
 
-# facebook 공유 링크 디버깅
+### Vercel 배포
+
+---
+
+### facebook 공유 링크 디버깅
