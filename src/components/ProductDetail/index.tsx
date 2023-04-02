@@ -14,9 +14,13 @@ const ProductDetail = ({
       <h3>Product ID: {productDetail.id}</h3>
 
       <Image
+        width={300}
+        height={300}
         src={productDetail.imageURL}
         alt={`${productDetail.name} product image`}
       />
+
+      <br />
 
       <Link href={"/store"}>Back to store page</Link>
     </>
