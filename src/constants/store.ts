@@ -1,22 +1,25 @@
 import { PRODUCT_DETAIL } from "@/types/store/data";
+import NIKE_SHOE_IMAGE_1 from "@/img/nike_shoe_1.webp";
+import NIKE_SHOE_IMAGE_2 from "@/img/nike_shoe_2.webp";
+import NIKE_SHOE_IMAGE_3 from "@/img/nike_shoe_3.webp";
 
 /** 상품 상세 정보 */
 const PRODUCT_DETAIL_1: PRODUCT_DETAIL = {
   id: 1,
   name: "Product Name 1",
-  imageURL: "../img/nike_shoe_1.webp",
+  imageURL: NIKE_SHOE_IMAGE_1,
 };
 
 const PRODUCT_DETAIL_2: PRODUCT_DETAIL = {
   id: 2,
   name: "Product Name 2",
-  imageURL: "../img/nike_shoe_2.webp",
+  imageURL: NIKE_SHOE_IMAGE_2,
 };
 
 const PRODUCT_DETAIL_3: PRODUCT_DETAIL = {
   id: 3,
   name: "Product Name 3",
-  imageURL: "../img/nike_shoe_3.webp",
+  imageURL: NIKE_SHOE_IMAGE_3,
 };
 
 /** 상품 리스트 */

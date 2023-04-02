@@ -15,6 +15,6 @@ export default function handler(
   res: NextApiResponse<GET_PRODUCT_LIST_RES>
 ) {
   if (req.method === "GET") {
-    delay(() => res.status(200).json(GET_PRODUCT_LIST_RES_SAMPLE), 3000);
+    delay(() => res.status(200).json(GET_PRODUCT_LIST_RES_SAMPLE), 2000);
   }
 }
