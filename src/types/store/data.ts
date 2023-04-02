@@ -6,6 +6,6 @@ interface ProductDetail {
 }
 
 /** 상품 리스트 */
-type ProductList = Pick<ProductDetail, "name">[];
+type ProductList = ProductDetail[];
 
 export type { ProductDetail, ProductList };
