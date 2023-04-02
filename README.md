@@ -58,7 +58,7 @@
 
 ---
 
-### 컴포넌트 추가
+### 사용할 컴포넌트 추가
 
 - ProductList
 - ProductDetail
