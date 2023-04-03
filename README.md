@@ -81,6 +81,12 @@
 
 ### Vercel 배포
 
+- dev 환경에서 테스트시 아래 .env.local 파일 root 디렉토리에 추가 필요
+
+```
+NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
+```
+
 ---
 
 ### facebook 공유 링크 디버깅
