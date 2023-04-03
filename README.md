@@ -64,16 +64,18 @@
 - ProductDetail
 - Loading
 
+### 커스텀 훅 추가
+
+- usePageLoading: getServerSideProps 사용시 페이지 로딩 상태를 사용하기 위한 훅
+
 ---
 
 ### 페이지 추가
 
 - store 페이지
   - 오픈그래프 메타 태그 추가
-  - suspense & lazy 적용
 - product 페이지
   - 오픈그래프 메타 태그 추가
-  - suspense & lazy 적용
 
 ---
 
