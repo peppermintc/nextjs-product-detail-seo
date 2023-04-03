@@ -7,6 +7,10 @@ import { lazy, Suspense } from "react";
 const Loading = lazy(() => import("@/components/Loading"));
 const ProductDetail = lazy(() => import("@/components/ProductDetail"));
 
+const API_BASE_URL =
+  process.env.NEXT_PUBLIC_API_BASE_URL ||
+  "https://nextjs-product-detail-seo.vercel.app";
+
 function Product({ productDetail }: { productDetail: GET_PRODUCT_DETAIL_RES }) {
   return (
     <>
@@ -24,7 +28,7 @@ function Product({ productDetail }: { productDetail: GET_PRODUCT_DETAIL_RES }) {
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
   const id = context.query.id;
-  const res = await fetch(`http://localhost:3000/api/store/product?id=${id}`);
+  const res = await fetch(`${API_BASE_URL}/api/store/product?id=${id}`);
   const productDetail: GET_PRODUCT_DETAIL_RES = await res.json();
 
   return {

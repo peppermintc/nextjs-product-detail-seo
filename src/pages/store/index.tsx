@@ -7,6 +7,10 @@ import { lazy, Suspense } from "react";
 const Loading = lazy(() => import("@/components/Loading"));
 const ProductList = lazy(() => import("@/components/ProductList"));
 
+const API_BASE_URL =
+  process.env.NEXT_PUBLIC_API_BASE_URL ||
+  "https://nextjs-product-detail-seo.vercel.app";
+
 function Store({ productList }: { productList: PRODUCT_LIST }) {
   return (
     <>
@@ -25,7 +29,7 @@ function Store({ productList }: { productList: PRODUCT_LIST }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch("http://localhost:3000/api/store/list");
+  const res = await fetch(`${API_BASE_URL}/api/store/list`);
   const data: GET_PRODUCT_LIST_RES = await res.json();
   const productList = data.list;
 
