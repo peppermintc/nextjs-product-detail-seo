@@ -1,4 +1,5 @@
 import MetaOpengraph from "@/components/MetaOpengraph";
+import MetaTwitter from "@/components/MetaTwitter";
 import ProductDetail from "@/components/ProductDetail";
 import { GET_PRODUCT_DETAIL_RES } from "@/types/api/store";
 
@@ -23,6 +24,13 @@ function Product({ productDetail }: { productDetail: GET_PRODUCT_DETAIL_RES }) {
           description={`${productDetail.name} description`}
           image={productDetail.imageURL.src}
           url={`${BASE_URL}/store/product/${productDetail.id}`}
+        />
+
+        <MetaTwitter
+          card="summary"
+          title={productDetail.name}
+          description={`${productDetail.name} description`}
+          image={productDetail.imageURL.src}
         />
       </Head>
 
