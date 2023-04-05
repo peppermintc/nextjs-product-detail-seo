@@ -26,12 +26,14 @@ function Product({ productDetail }: { productDetail: GET_PRODUCT_DETAIL_RES }) {
           url={`${BASE_URL}/store/product/${productDetail.id}`}
         />
 
-        <MetaTwitter
-          card="summary"
-          title={productDetail.name}
-          description={`${productDetail.name} description`}
-          image={productDetail.imageURL.src}
+        {/* Twitter */}
+        <meta name="twitter:card" content={"summary"} />
+        <meta name="twitter:title" content={productDetail.name} />
+        <meta
+          name="twitter:description"
+          content={`${productDetail.name} description`}
         />
+        <meta name="twitter:image" content={productDetail.imageURL.src} />
       </Head>
 
       <ProductDetail productDetail={productDetail} />
