@@ -1,4 +1,4 @@
-import { PRODUCT_LIST } from "@/types/store/data";
+import { PRODUCT_LIST } from "@/types/data/store";
 import Link from "next/link";
 import React from "react";
 

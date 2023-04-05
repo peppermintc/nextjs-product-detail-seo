@@ -1,4 +1,4 @@
-import { PRODUCT_DETAIL, PRODUCT_LIST } from "./data";
+import { PRODUCT_DETAIL, PRODUCT_LIST } from "../data/store";
 
 /** 상품 상세 정보 응답 */
 type GET_PRODUCT_DETAIL_RES = PRODUCT_DETAIL;

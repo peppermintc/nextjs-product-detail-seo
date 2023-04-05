@@ -1,4 +1,4 @@
-import { PRODUCT_DETAIL } from "@/types/store/data";
+import { PRODUCT_DETAIL } from "@/types/data/store";
 import NIKE_SHOE_IMAGE_1 from "@/img/nike_shoe_1.webp";
 import NIKE_SHOE_IMAGE_2 from "@/img/nike_shoe_2.webp";
 import NIKE_SHOE_IMAGE_3 from "@/img/nike_shoe_3.webp";

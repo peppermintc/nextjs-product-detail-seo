@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-import { ERROR_RES } from "@/types/common/api";
-import { GET_PRODUCT_DETAIL_RES } from "@/types/store/api";
+import { ERROR_RES } from "@/types/api/common";
+import { GET_PRODUCT_DETAIL_RES } from "@/types/api/store";
 import { delay } from "@/utils/common";
 import { formatProductId, getProductDetail } from "@/utils/store";
 import type { NextApiRequest, NextApiResponse } from "next";

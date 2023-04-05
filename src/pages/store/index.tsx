@@ -1,5 +1,5 @@
-import { GET_PRODUCT_LIST_RES } from "@/types/store/api";
-import { PRODUCT_LIST } from "@/types/store/data";
+import { GET_PRODUCT_LIST_RES } from "@/types/api/store";
+import { PRODUCT_LIST } from "@/types/data/store";
 
 import Head from "next/head";
 import { lazy } from "react";

@@ -1,5 +1,5 @@
 import { PRODUCT_LIST } from "@/constants/store";
-import { PRODUCT_DETAIL } from "@/types/store/data";
+import { PRODUCT_DETAIL } from "@/types/data/store";
 
 /**
  * 상품 리스트에서 ID로 상품 정보를 반환

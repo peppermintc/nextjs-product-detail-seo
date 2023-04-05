@@ -1,5 +1,5 @@
 import MetaOpengraph from "@/components/MetaOpengraph";
-import { GET_PRODUCT_DETAIL_RES } from "@/types/store/api";
+import { GET_PRODUCT_DETAIL_RES } from "@/types/api/store";
 
 import Head from "next/head";
 import { GetServerSidePropsContext } from "next/types";
