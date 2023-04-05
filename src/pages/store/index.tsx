@@ -1,10 +1,8 @@
+import ProductList from "@/components/ProductList";
 import { GET_PRODUCT_LIST_RES } from "@/types/api/store";
 import { PRODUCT_LIST } from "@/types/data/store";
 
 import Head from "next/head";
-import { lazy } from "react";
-
-const ProductList = lazy(() => import("@/components/ProductList"));
 
 const BASE_URL =
   process.env.NODE_ENV === "production"

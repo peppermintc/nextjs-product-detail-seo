@@ -1,11 +1,9 @@
 import MetaOpengraph from "@/components/MetaOpengraph";
+import ProductDetail from "@/components/ProductDetail";
 import { GET_PRODUCT_DETAIL_RES } from "@/types/api/store";
 
 import Head from "next/head";
 import { GetServerSidePropsContext } from "next/types";
-import { lazy } from "react";
-
-const ProductDetail = lazy(() => import("@/components/ProductDetail"));
 
 const BASE_URL =
   process.env.NODE_ENV === "production"
