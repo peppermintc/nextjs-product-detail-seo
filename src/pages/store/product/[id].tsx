@@ -1,3 +1,4 @@
+import MetaOpengraph from "@/components/MetaOpengraph";
 import { GET_PRODUCT_DETAIL_RES } from "@/types/store/api";
 
 import Head from "next/head";
@@ -17,16 +18,12 @@ function Product({ productDetail }: { productDetail: GET_PRODUCT_DETAIL_RES }) {
         <title>{productDetail.name}</title>
         <meta name="description" content="Product page description" />
 
-        <meta property="og:title" content={productDetail.name} />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content={`${API_BASE_URL}/store/product/${productDetail.id}`}
-        />
-        <meta property="og:image" content={productDetail.imageURL.src} />
-        <meta
-          property="og:description"
-          content={`${productDetail.name} description`}
+        <MetaOpengraph
+          type="website"
+          title={productDetail.name}
+          description={`${productDetail.name} description`}
+          image={productDetail.imageURL.src}
+          url={`${API_BASE_URL}/store/product/${productDetail.id}`}
         />
       </Head>
 
